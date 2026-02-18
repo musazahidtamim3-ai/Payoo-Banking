@@ -15,11 +15,12 @@ document.getElementById("login-btn").addEventListener("click", function(){
 
     // 3. match the mobile number and pin
 
-    if ( contactNumber == "01823456789" && pin == "1234"){
-        alert("Login Success")
+    if ( contactNumber.length == 11 && pin == "1234"){
+        alert("Login Successfull. please press ok button to enter home page")
         window.location.replace("./home.html")
     }
     else{
-        alert("Login failed. Please try again")
+        alert("Login failed. Please try again");
+        return;
     }
 })
