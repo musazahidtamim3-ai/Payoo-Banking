@@ -25,6 +25,7 @@ function showId(id){
     const cashOut = document.getElementById("cashout")
     const transfer = document.getElementById("transfer-money")
     const payBill = document.getElementById("pay-bill")
+    const cupon = document.getElementById("get-cupon")
     const history = document.getElementById("history-container")
     
 
@@ -34,6 +35,7 @@ function showId(id){
     history.classList.add("hidden");
     transfer.classList.add("hidden");
     payBill.classList.add("hidden");
+    cupon.classList.add("hidden");
 
     // remove hidden from selected id 
     const selected = document.getElementById(id);
