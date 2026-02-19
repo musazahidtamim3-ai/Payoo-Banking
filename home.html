@@ -64,7 +64,7 @@
                     <img src="./assets/opt-2.png" alt="">
                     <p>Cashout</p>
                 </button>
-                <button class="btn flex-col h-full py-5 btn-primary btn-soft">
+                <button onclick="showId('transfer-money')" class="btn flex-col h-full py-5 btn-primary btn-soft">
                     <img src="./assets/opt-3.png" alt="">
                     <p>Send Money</p>
                 </button>
@@ -143,12 +143,38 @@
         </div>
     </section>
 
-    <section id="history-container" class="w-11/12 mx-auto mb-5 hidden space-y-5">
+    <section id="transfer-money" class="w-11/12 mx-auto mb-5 hidden">
+        <h2 class="text-2xl font-bold">Transfer Money</h2>
+        <div class="form">
+            <div class="card bg-base-100 w-full shadow mt-5 rounded-xl">
+                <div class="card-body">
+                    <fieldset class="fieldset ">
+                        <label class="label text-neutral font-bold pb-1">User Account Number</label>
+                        <input id="transfer-number" maxlength="11" minlength="11" type="text"
+                            class="input rounded-full bg-base-200 border-none w-full"
+                            placeholder="Enter 11 digit number " />
+                        <label class="label text-neutral font-bold pb-1">Amount</label>
+                        <input id="transfer-amount" maxlength="11" minlength="11" type="number"
+                            class="input rounded-full bg-base-200 border-none pb-1 w-full"
+                            placeholder="Enter amount to transfer" />
+                        <label class="label text-neutral font-bold pb-1">Pin Number</label>
+                        <input id="transfer-pin" maxlength="4" type="password"
+                            class="input rounded-full bg-base-200 border-none w-full"
+                            placeholder="Enter 4 digit pin number" />
+                        <button id="transfer-btn" class="btn btn-primary mt-4 rounded-full w-full ">Send Now</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="history-container" class="w-11/12 mx-auto mb-5 hidden space-y-5" >
         <h2 class="text-2xl font-bold pb-5">Transactions</h2>
         
     </section>
 
     <script src="./script/machine.js"></script>
+    <script src="./script/transfer.js"></script>
     <script src="./script/add-money.js"></script>
     <script src="./script/home.js"></script>
 </body>
